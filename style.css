@@ -684,8 +684,8 @@ main .insights .progress{
     main .top input[type='search']{
         position: fixed;
         top:1rem;
-        left: 5rem;
-        width: 10rem;
+        left: 4rem;
+        width: 12rem;
         z-index: 3;
         align-items: center;
     }
@@ -717,9 +717,11 @@ main .insights .progress{
         display: none;
     }
 
-    .right .top {
-        
+    .right .top{
+        gap: 1rem;
+        padding-right: 1.8rem;
     }
+
 
     .right .top button{
         display: inline;
