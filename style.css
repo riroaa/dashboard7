@@ -292,7 +292,7 @@ main .insights-name{
 
 
 main .insights{
-    margin-top: 2.9rem;
+    margin-top: 2rem;
     display:grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1rem;
@@ -482,11 +482,11 @@ main .insights .progress{
 
 
 .right .recent-updates{
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .right .recent-updates h2{
-    margin-bottom: 0.8rem;
+    margin-bottom: 2rem;
 }
 
 .right .recent-updates .updates{
@@ -610,7 +610,7 @@ main .insights .progress{
     main .insights{
         grid-template-columns: 1fr;
         gap: 1rem;
-        margin-top: 4.3rem;
+  
     }
 
 
