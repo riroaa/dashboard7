@@ -19,6 +19,7 @@
     --border-radius-3: 1.2rem;
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
+    --top-margin: 1.4rem;
     --box-shadow: 0 2rem 3rem var(--color-light);
     --progress: #007bff 80%, transparent 80%;
 }
@@ -136,7 +137,7 @@ img{
 aside {
     height: 100vh;
     padding: 0 auto;
-    margin-top: 1.4rem;
+    margin-top: var(--top-margin);
 }
 
 aside .top {
@@ -224,7 +225,8 @@ aside .sidebar a.active span {
 }
 
 main{
-    margin-top: 1.4rem;
+    margin-top: var(--top-margin);
+ 
 }
 
 
@@ -234,6 +236,7 @@ main h1{
 }
 
 main .top{
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -428,10 +431,12 @@ main .insights .progress{
 }
 
 .right{
-    margin-top: 1.4rem;
+    margin-top: var(--top-margin);
+    
 }
 
 .right .top{
+    height: 3.8rem;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -587,6 +592,10 @@ main .insights .progress{
     aside .sidebar a{
         width: 5rem;
         margin-left: 0.2rem;
+    }
+
+    .right .top{
+        height: 2.4rem;
     }
 
     main .top .title{
