@@ -679,16 +679,13 @@ main .insights .progress{
 
     main .top .title{
         display: none;
-        
-
     }
-    
 
     main .top input[type='search']{
         position: fixed;
         top:1rem;
-        left: 10%;
-        width: 14rem;
+        left: 5rem;
+        width: 10rem;
         z-index: 3;
         align-items: center;
     }
