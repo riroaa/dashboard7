@@ -699,7 +699,7 @@ main .insights .progress{
     }
 
     aside .sidebar a:last-child{
-        position: relative;
+        position: absolute;
         margin-bottom: 4rem;
 
     }
@@ -789,6 +789,29 @@ main .insights .progress{
 
 
 
+
+
+
+@media screen and (max-height: 520px) {
+    body{
+        
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 2.1rem;
+        margin-top: 0;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        margin-bottom: 2.1rem;
+
+    }
+
+
+   
+}
 
 
 

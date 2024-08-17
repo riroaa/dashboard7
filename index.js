@@ -30,6 +30,25 @@ themeToggler.addEventListener('click', () => {
 
 });
 
+// Clear the existing table body content
+document.querySelector('table tbody').innerHTML = '';
 
+// Append new rows
+Orders.forEach(order => {
+    const tr = document.createElement('tr');
+    const trContent = `<td>${order.productName}</td>
+                            <td>${order.productNumber}</td>
+                            <td>${order.paymentStatus}</td>
+                            <td class=${order.shipping === 'Declined' ? 'danger' 
+                                : order.shipping === 'Pending' ? 'warning'
+                                :  'primary' }>${order.shipping}</td>
+                            <td class="primary">
+                                <span class="material-symbols-sharp">
+                                    chevron_right
+                                </span>
+                            </td>`;
+    tr.innerHTML = trContent;
+    document.querySelector('table tbody').appendChild(tr);
+});
 
 
