@@ -24,6 +24,17 @@
     --progress: #007bff 80%, transparent 80%;
 }
 
+
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --color-info-light: rgba(255, 255, 255, 0.2);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -129,14 +140,14 @@ img{
     display: grid;
     grid-template-columns: 14rem auto 26rem;
     gap: 1.8rem;
-    margin: 0 1rem;
+    margin: 0;
 }
 
 
 
 aside {
     height: 100vh;
-    padding: 0 auto;
+    padding: 0 1rem;
     margin-top: var(--top-margin);
 }
 
@@ -252,6 +263,7 @@ main .top .title{
 main .top input[type='search']{
     height: 2.4rem;
     background: var(--color-info-light);
+    color: var(--color-dark);
     padding: 0.88rem;
     border-radius: var(--border-radius-1);
     width: 30rem;
@@ -644,12 +656,22 @@ main .insights .progress{
         position: fixed ;
         background: var(--color-white);
         width: 18rem;
-        z-index: 3;
-        left: 0;
+        z-index: 4;
+        left: -100%;
         height: 100vh;
         box-shadow: 1rem 3rem 4rem var(--color-light);
         padding-right: var(--card-padding);
         display:none;
+        margin-top: 0;
+        padding-top: var(--top-margin);
+        animation: menuAnimation 300ms ease forwards;
+    }
+
+    @keyframes menuAnimation {
+        to{
+            left: 0;
+        }
+        
     }
 
     aside .top .logo{
@@ -681,7 +703,7 @@ main .insights .progress{
     }
 
     main{
-        margin-top: 1rem;
+        margin-top: 3rem;
         padding-right: 1.8rem;
     }
 
@@ -696,8 +718,9 @@ main .insights .progress{
         left: 4rem;
         width: 12rem;
         z-index: 3;
-        align-items: center;
+        align-items: left;
     }
+
 
     main .recent-orders{
         position: relative;

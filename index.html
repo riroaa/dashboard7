@@ -24,7 +24,7 @@
 
                     <h2>RI<span class="danger">RO</span></h2>
                 </div>
-                <div class="close">
+                <div class="close" id="close-btn">
                     <span class="material-symbols-sharp">
                         close
                     </span>
@@ -104,7 +104,7 @@
                 <small class="text-muted">Get the latest insigts</small>
                 </div>
                 <div class="search">
-                    <input type="search" placeholder="Search...">
+                    <input type="search" placeholder="Search..." >
                 </div>
             </div>
         <div class="insights-name">
@@ -358,19 +358,7 @@
 
     </div>
 </div>
-    <script>
-        const links = document.querySelectorAll('.sidebar a');
-
-        links.forEach(link => {
-            link.addEventListener('click', function (event) {
-                links.forEach(l => {
-                    l.classList.remove('active');
-                });
-                this.classList.add('active');
-            });
-        });
-
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
