@@ -789,6 +789,17 @@ main .insights .progress{
         
     }
 
+    aside {
+        margin-top: 0;
+        padding-top: 0.6rem;
+    }
+
+    aside .sidebar{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+
     aside .sidebar a{
         width: 100%;
         height: 2rem;
