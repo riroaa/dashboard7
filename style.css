@@ -674,6 +674,12 @@ main .insights .progress{
         
     }
 
+    .sidebar {
+        height: 100vh;
+        position: relative;
+        top: 1rem;
+    }
+
     aside .top .logo{
         margin-left: 1rem;
     }
@@ -693,8 +699,8 @@ main .insights .progress{
     }
 
     aside .sidebar a:last-child{
-        position: absolute;
-        margin-bottom: 5rem;
+        position: relative;
+        margin-bottom: 4rem;
 
     }
 
@@ -716,7 +722,7 @@ main .insights .progress{
         position: fixed;
         top:1rem;
         left: 4rem;
-        width: 12rem;
+        width: 10rem;
         z-index: 3;
         align-items: left;
     }
