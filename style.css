@@ -722,7 +722,7 @@ input[type='search'] {
 
     aside{
         display:none;
-        width: 14rem;
+        width: 60%;
         z-index: 2;
         position: absolute;
         top:0;
