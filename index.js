@@ -1,54 +1,34 @@
-const links = document.querySelectorAll('.sidebar a');
+const links = document.querySelectorAll('.menu-main a');
 
 links.forEach(link => {
-    link.addEventListener('click', function (event) {
+    link.addEventListener('click', function(event){
         links.forEach(l => {
-            l.classList.remove('active');
+            l.classList.remove('active');  
         });
         this.classList.add('active');
-    });
+    });   
 });
 
-const menuBtn = document.querySelector('#menu-btn');
-const closeBtn = document.querySelector('#close-btn');
+
+const menu = document.querySelector('header .left span');
 const aside = document.querySelector('aside');
-const themeToggler = document.querySelector('.theme-toggler');
+const close = document.querySelector('.close');
 
-menuBtn.addEventListener('click', () =>{
-    aside.style.display = 'block';
+menu.addEventListener('click', function(event){
+aside.style.display = 'block';
 });
 
-closeBtn.addEventListener('click', () =>
-{
+close.addEventListener('click', function(event){
     aside.style.display = 'none';
 });
 
-themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme-variables');
-    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
-    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+const toggler = document.querySelector('.toggler');
+const togglerLight = document.querySelector('.toggler span:nth-child(1)');
+const togglerDark = document.querySelector('.toggler span:nth-child(2)');
 
+toggler.addEventListener('click', function(event){
+    document.body.classList.toggle('theme');
+    togglerLight.classList.toggle('active');
+    togglerDark.classList.toggle('active');
 });
-
-// Clear the existing table body content
-document.querySelector('table tbody').innerHTML = '';
-
-// Append new rows
-Orders.forEach(order => {
-    const tr = document.createElement('tr');
-    const trContent = `<td>${order.productName}</td>
-                            <td>${order.productNumber}</td>
-                            <td>${order.paymentStatus}</td>
-                            <td class=${order.shipping === 'Declined' ? 'danger' 
-                                : order.shipping === 'Pending' ? 'warning'
-                                :  'primary' }>${order.shipping}</td>
-                            <td class="primary">
-                                <span class="material-symbols-sharp">
-                                    chevron_right
-                                </span>
-                            </td>`;
-    tr.innerHTML = trContent;
-    document.querySelector('table tbody').appendChild(tr);
-});
-
-
+   
