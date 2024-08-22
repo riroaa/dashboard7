@@ -7,14 +7,22 @@
     --text-primary-color: #180E3F;
     --text-secondary-color: #737373;
     --cta-text-color: white;
-    --cta-primary-color: #7380ec;
+    --cta-primary-color: var(--primary-color);
     --color-info-light: #E6E9F0;
-    --active-color: #c9bff1;
-    --chart-primary-color: #7380ec;
-    --success-color: #41f1b6;
-    --warning-color:#ffbb55;
-    --danger-color: #ff7782;
-    --primary-color: #7380ec;
+
+    --active-color: rgb(115, 128, 236,0.2);
+    --chart-primary-color: var(--primary-color);
+    --success-color: rgb(45, 241, 182);
+    --success-color-bg: rgb(45, 241, 182,0.2);
+    --warning-color:rgb(255, 187, 85);
+    --warning-color-bg:rgb(255, 187, 85,0.2);
+    --danger-color: rgb(255, 119, 130);
+    --danger-color-bg: rgb(255, 119, 130,0.2);
+    --primary-color: rgb(115, 128, 236);
+    --primary-color-bg: rgb(115, 128, 236,0.2);
+    --success-color-theme: var(--success-color);
+    --warning-color-theme: var(--warning-color);
+    --danger-color-theme: var(--danger-color);
     --card-radius: 2rem;
     --card-radius-1: 1.2rem;
     
@@ -24,25 +32,35 @@
 }
 
 .theme{
-    --background-color: #181a1e;
-    --card-bgcolor: #202528;
+    --background-color: #1B2431;
+    --card-bgcolor: #273142;
     --card-title-bgcolor: #edeffd;
     --text-primary-color: #edeffd;
     --text-secondary-color: #737373;
     --cta-text-color: white;
     --cta-primary-color: #c9bff1;
-    --active-color: #7380ec;
+    --active-color: rgb(115, 128, 236,0.5);
 
     --color-white: #202528;
     --color-dark: #edeffd;
     --color-dark-variant: #a3bdcc;
     --color-light: #edeffd;
-    --color-info-light: rgba(255, 255, 255, 0.2);
+    --color-info-light: rgba(255, 255, 255, 0.1);
+
+    --success-color-theme: rgb(45, 241, 182);
+    --warning-color-theme:rgb(255, 187, 85);
+    --danger-color-theme: rgb(255, 119, 130);
+    --primary-color-bg: rgb(115, 128, 236);
+    --success-color-bg: transperant;
+    --warning-color-bg: transperant;
+    --danger-color-bg: transperant;
+
 }
 
 .primary {
     color: var(--primary-color);
     font-weight: 400;
+    
 }
 
 .danger {
@@ -58,6 +76,38 @@
 .success {
     color: var(--success-color);
     font-weight: 600;
+}
+
+
+
+.dangerbg {
+    color: var(--danger-color-theme);
+    background: var(--danger-color-bg);
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    padding: 1px 2px;
+}
+
+.warningbg {
+    color: var(--warning-color-theme);
+    background: var(--warning-color-bg);
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    padding: 1px 2px;
+}
+
+.successbg {
+    color: var(--success-color-theme);
+    background: var(--success-color-bg);
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    padding: 1px 2px;
 }
 
 * {
@@ -310,6 +360,21 @@ header .right .profile {
     padding: 0.8rem;
 }
 
+.insight1 span{
+    background: var(--primary-color);
+    color: var(--color-white);
+}
+
+.insight2 span{
+    background: var(--danger-color);
+    color: var(--color-white);
+}
+
+.insight3 span{
+    background: var(--success-color);
+    color: var(--color-white);
+}
+
 .insight .progress {
     display: flex;
     justify-content: space-between;
@@ -370,6 +435,7 @@ header .right .profile {
 
 }
 
+
 .table-info {
     grid-area: table-info;
     width: 100%;
@@ -427,10 +493,21 @@ header .right .profile {
     padding-bottom: 1rem;
 }
 
+.table-info table thead th:nth-child(4) {
+    text-align: center;
+    width: 80px;
+}
+
+.table-info table tbody td:nth-child(5) {
+    text-align: center;
+    width: 80px;
+}
+
+
 .table-info table tbody tr td {
     border-bottom: var(--active-color) solid 0.1rem;
     text-align: left;
-    height: 2.4rem;
+    height: 3rem;
 }
 
 .table-info .acenter {
